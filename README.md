@@ -1,8 +1,8 @@
-# Otimização Massiva de Contato no Canal Outbound Voz
+# Otimização Massiva de Contacto no Canal Outbound Voz
 ## 1- Descrição
 ### 1.1 - Background
-O canal comercial de voz outbound é um dos canais privilegiados de contato de uma agência de Viagens com os seus Clientes e representa um volume muito significativo da atividade comercial. A estratégia de contatação deste canal é implementada por dialers de diferentes sistemas de parceiros destes serviços que podem beneficiar de estratégias de otimização analítica. 
-A estratégia atual do dialer é genericamente implementada numa máquina que percorre sequencialmente os registos carregados - cada registo num lote corresponde a um par id_cliente e tlf de contato. O dialer aplica algumas regras higiénicas tal como aplicação de "quarentenas" de 4 horas para cada par. Tipicamente o contato fica "fechado" uma vez esgotado o nº de tentativas que são configuradas como valor máximo.
+O canal comercial de voz outbound contata Clientes de forma proativa, e é um dos canais privilegiados de contacto de uma agência de Viagens com os seus Clientes e representa um volume muito significativo da atividade comercial. A estratégia de definição de contactos a fazer deste canal é implementada por dialers de diferentes sistemas de parceiros destes serviços que podem beneficiar de estratégias de otimização analítica. 
+A estratégia atual do dialer é genericamente implementada numa máquina que percorre sequencialmente os registos carregados - cada registo num lote corresponde a um par id_cliente e tlf de contacto. O dialer aplica algumas regras higiénicas tal como aplicação de "quarentenas" de 4 horas para cada par. Tipicamente o contacto fica "fechado" uma vez esgotado o nº de tentativas que são configuradas como valor máximo.
 
 ### 1.2 Objetivos
 Disponibilizando informação transacional sobre uma destas atividades comerciais, pretende-se otimizar esta operação de outbound de forma a melhorar os seguintes aspetos:
@@ -13,10 +13,10 @@ Disponibilizando informação transacional sobre uma destas atividades comerciai
 ## 2- Tarefas
 ### 2.1 Previsão Atendimento de Chamada
 Prever o evento de chamada atendida para segmento do Dataset obtido pela filtragem do campo Base = 'Teste'.
-Disponibilizar em ficheiro para este conjunto de informação e para cada registo a probabilidade de atendimento e a classificação final dada pelo modelo.
+Disponibilizar em ficheiro para este conjunto de informação (e para cada registo) a probabilidade de atendimento e a classificação final dada pelo modelo.
 
 ### 2.2 Apresentação de Resultados
-Preparar da melhor forma possível uma apresentação com a duração de 1hr de forma a explicar a abordagem seguida para atingir os objetivos declarados, estruturar os resultados obtidos, discutir em que medida a implementação da estratégia de contatação no dialerdeve ser alterada para garantir a otimização e identificar oportunidades de melhoria. 
+Preparar da melhor forma possível uma apresentação com a duração de 1hr de forma a explicar a abordagem seguida para atingir os objetivos declarados, estruturar os resultados obtidos, discutir em que medida a implementação da estratégia de contatação no dialer deve ser alterada para garantir a otimização e identificar oportunidades de melhoria. 
 Disponibilizar o código, preferencialmente em R, para uma discussão técnica de implementação de 30mins.
 
 ## 3- Informação
@@ -35,15 +35,15 @@ Disponibilizar o código, preferencialmente em R, para uma discussão técnica d
 |Campo                             |      Descrição|
 |:--------------------------------|:--------------:|
 |Base | Identificação do segmento do dataset - Teste, Treino e informação histórica|
-|Data_do_Lote | Dia da produção do Lote de Contato|
-|dt_hr_tentativa | Timestamp da tentativa de Contato|
+|Data_do_Lote | Dia da produção do Lote de Contacto|
+|dt_hr_tentativa | Timestamp da tentativa de Contacto|
 |id_cliente_A | ID único de um Cliente anonimizado|
-|tlf_destino_A | Telefone de contato anonimizado|
+|tlf_destino_A | Telefone de contacto anonimizado|
 |indc_destino_A | 2 primeiros digitos do tlf de destino|
 |tlf_origem_A | Telefone de origem anonimizado|
 |indc_tlf_ori_A | 2 primeiros digitos do tlf de origem|
 |duracao | duração da chamada|
-|outcome | Resultado do contato, pode assumir, tanto quanto sabemos valores em [1] |
+|outcome | Resultado do contacto, pode assumir, tanto quanto sabemos valores em [1] |
 |tipificacao | Última tipificação inserida em sistema pelo operador|
 
 [1] Valores de Outcome
